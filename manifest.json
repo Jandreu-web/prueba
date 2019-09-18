@@ -5,17 +5,17 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "images/128ico.png",
+      "src": "images/pruebaicon.png",
       "type": "image/png",
       "sizes": "128x128"
     },
     {
-      "src": "images/144ico.png",
+      "src": "images/pruebaicon.png",
       "type": "image/png",
       "sizes": "144x144"
     },
     {
-      "src": "images/152ico.png",
+      "src": "images/pruebaicon.png",
       "type": "image/png",
       "sizes": "152x152"
     }
