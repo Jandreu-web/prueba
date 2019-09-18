@@ -1,7 +1,8 @@
 var CACHE_NAME = 'Lab report';
 var urlsToCache = [
-  '../index.html'
- 
+  '../index.html',
+  '../manifest.json'
+  
 ];
 
 
