@@ -66,7 +66,30 @@
 			</tbody>
 		</table>
 </body>
-		<script>
+
+<hr/>
+<h1><span id="patient_name">...</span></h1>
+<hr/>
+
+
+<script>
+
+ // Set up a client and patient ID to talk to an un-authenticated FHIR server
+    var client = jqFhir({ baseUrl: 'https://r3.smarthealthit.org/' }),
+        patientId = 'ad55e27a-1859-4c6b-91b7-1a368e2630b9';
+
+    client.read({
+      id: 'Patient/' + patientId
+    }).then(function(p) {
+      var name = p.content.name[0];
+      var formatted = name.given.join(" ") + " " + name.family;
+      $("#patient_name").text(formatted);
+    });
+	
+
+
+
+
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('sw.js').then(function(registration) {
