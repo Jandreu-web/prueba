@@ -72,8 +72,12 @@
 <h1><span id="patient_name">...</span></h1>
 <hr/>
 
+<button class="share-button">Share with the Web Share API</button>
 
 <script>
+
+
+
 
  // Set up a client and patient ID to talk to an un-authenticated FHIR server
     var client = jqFhir({ baseUrl: 'https://r3.smarthealthit.org/' }),
@@ -102,5 +106,17 @@ if ('serviceWorker' in navigator) {
     });
   });
 }
+//Share url
+ document.querySelector('.share-button').addEventListener('click', function() {
+   if(navigator.share) {
+    navigator.share({
+      title: "mobiForge: Web Share API",
+      text: "Check out this great article about the Web Share API",
+       url: "http:www.google.es",
+     })
+     .then(() => console.log('Share complete'))
+     .error((error) => console.error('Could not share at this time', error))
+   }
+  });
 </script>
 </html>
