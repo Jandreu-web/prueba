@@ -125,8 +125,8 @@ if(navigator.share) {
 }
 
  document.querySelector('.share-button').addEventListener('click', function() {
-   if(navigator.share) {
-    navigator.share({
+   if(navigator.sharedata) {
+    navigator.sharedata({
       title: "CDA Report",
      // text: "Check out this great article about the Web Share API",
        url: "https://jandreu-web.github.io/prueba/cernercda.zip",
