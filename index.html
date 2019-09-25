@@ -75,7 +75,9 @@
 <button class="share-button">Share with the Web Share API</button>
 
 <!--<a href=\"assets/CDA/cernercda.zip\" target=\"_blank\"> -->
-<img class="share-button" src="images/descargarsmall.png" title="Descarga CDA">
+<img onclick="functionshare()" src="images/descargarsmall.png" title="Descarga CDA">
+
+
 
 <script>
 
@@ -110,6 +112,18 @@ if ('serviceWorker' in navigator) {
   });
 }
 //Share url
+function functionshare(){
+if(navigator.share) {
+    navigator.share({
+      title: "CDA Report",
+     // text: "Check out this great article about the Web Share API",
+       url: "https://jandreu-web.github.io/prueba/cernercda.zip",
+     })
+     .then(() => console.log('Share complete'))
+     .error((error) => console.error('Could not share at this time', error))
+   }
+}
+
  document.querySelector('.share-button').addEventListener('click', function() {
    if(navigator.share) {
     navigator.share({
@@ -121,6 +135,7 @@ if ('serviceWorker' in navigator) {
      .error((error) => console.error('Could not share at this time', error))
    }
   });
+  
   
 </script>
 </html>
