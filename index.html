@@ -113,8 +113,8 @@ if ('serviceWorker' in navigator) {
  document.querySelector('.share-button').addEventListener('click', function() {
    if(navigator.share) {
     navigator.share({
-      title: "mobiForge: Web Share API",
-      text: "Check out this great article about the Web Share API",
+      title: "CDA Report",
+     // text: "Check out this great article about the Web Share API",
        url: "cernercda.zip",
      })
      .then(() => console.log('Share complete'))
