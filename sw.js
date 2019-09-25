@@ -2,8 +2,7 @@ var CACHE_NAME = 'Lab report';
 var urlsToCache = [
   'index.html',
   'manifest.json'
-  
-  ];
+   ];
 
 
 self.addEventListener('install', function(event) {
