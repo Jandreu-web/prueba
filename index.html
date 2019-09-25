@@ -74,6 +74,9 @@
 
 <button class="share-button">Share with the Web Share API</button>
 
+<!--<a href=\"assets/CDA/cernercda.zip\" target=\"_blank\"> -->
+<img class="share-button" src="images/descargarsmall.png" title="Descarga CDA">
+
 <script>
 
 
@@ -112,7 +115,7 @@ if ('serviceWorker' in navigator) {
     navigator.share({
       title: "mobiForge: Web Share API",
       text: "Check out this great article about the Web Share API",
-       url: "http:www.google.es",
+       url: "ceernercda.zip",
      })
      .then(() => console.log('Share complete'))
      .error((error) => console.error('Could not share at this time', error))
